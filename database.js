@@ -16,7 +16,7 @@ VALUES (?, ?, ?, ?, ?)`);
   statement.run(
     studentID,
     student.name,
-    student.class,
+    student.regClass,
     student.school,
     student.email
   );
