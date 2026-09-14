@@ -10,8 +10,8 @@ email TEXT NOT NULL,
 status TEXT DEFAULT 'pending')`);
 
 export function register(student) {
-  let statement = db.prepare(`INSERT INTO registrations (id, name, class, school, email)
-VALUES (?, ?, ?, ?, ?)`);
+  let statement = db.prepare(`INSERT INTO registrations (name, class, school, email)
+VALUES (?, ?, ?, ?)`);
   statement.run(
     student.name,
     student.regClass,

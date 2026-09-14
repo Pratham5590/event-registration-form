@@ -1,6 +1,9 @@
 const form = document.querySelector("#register");
 
 form.addEventListener("submit", async (event) => {
+  form.style.display = "flex";
+  const confirm = document.querySelector(".confirm", "confimr-wrong");
+  confirm.style.display = "none";
   event.preventDefault();
 
   const name = document.querySelector("#name").value;
