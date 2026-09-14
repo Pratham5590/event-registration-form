@@ -2,11 +2,11 @@ import Database from 'better-sqlite3';
 const db = new Database("registration.db");
 
 db.exec(`CREATE TABLE IF NOT EXISTS registrations (
-id INTEGER PRIMARY KEY
-name TEXT NOT NULL
-class INTEGER NOT NULL
-school TEXT NOT NULL
-email TEXT NOT NULL
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+class INTEGER NOT NULL,
+school TEXT NOT NULL,
+email TEXT NOT NULL,
 status TEXT DEFAULT 'pending')`);
 
 export function register(student) {
