@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Science Spark 2026 | School Science Exhibition</title>
+	<style>
+		:root {
+			--navy: #24415c;
+			--blue: #4d83a8;
+			--cyan: #d9edf2;
+			--light: #f7fafb;
+			--ink: #263746;
+		}
+		* { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+		body {
+			font-family: Arial, sans-serif;
+      color: var(--ink); 
+      background: var(--light); 
+			line-height: 1.6;
+    }
+		.hero {
+			min-height: 560px;
+      display: flex; 
+      align-items: center; 
+      position: relative; 
+			background: #eef5f7;
+			color: var(--navy);
+			border-bottom: 1px solid #d6e2e7;
+    }
+		.wrap { 
+      width: min(1120px, 90%); 
+      margin: auto; 
+      position: relative; 
+      z-index: 1; 
+    }
+		nav {
+      position: absolute; 
+      top: 28px; 
+      left: 5%; 
+      right: 5%; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      z-index: 2;
+    }
+		.brand { font-size: 1.15rem; font-weight: bold; }
+		.brand span { color: var(--blue); }
+		.hero-content { max-width: 700px; padding: 100px 0 60px; }
+		.tag { color: var(--blue); font-size: .8rem; font-weight: bold; text-transform: uppercase; }
+		h1 { font-size: clamp(2.8rem, 7vw, 5rem); line-height: 1.05; margin: 18px 0; letter-spacing: -2px; }
+		h1 span { color: var(--blue); }
+		.lead { max-width: 600px; color: #536875; margin-bottom: 25px; }
+		.button { display: inline-block; padding: 10px 18px; border-radius: 4px; background: var(--blue); color: white; text-decoration: none; font-weight: bold; }
+		.button:hover { background: var(--navy); }
+		.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 650px; margin-top: 42px; }
+		.fact { border-left: 2px solid var(--blue); padding-left: 12px; }
+		.fact strong { display: block; font-size: 1rem; }
+		.fact small { color: #637783; }
+		.section { padding: 65px 0; background: white; }
+		.section h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy); margin-bottom: 10px; }
+		.section-intro { color: #5d7185; max-width: 650px; margin-bottom: 32px; }
+		.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+		.card { padding: 20px; background: var(--light); border: 1px solid #dce7eb; }
+		.icon { font-size: 1.6rem; margin-bottom: 8px; }
+		.card h3 { margin-bottom: 8px; color: var(--navy); }
+		.register { padding: 60px 0; background: var(--cyan); text-align: center; }
+		.register p { margin: 8px auto 24px; color: #5d7185; }
+		footer { padding: 20px; text-align: center; background: var(--navy); color: #d8e5ea; font-size: .9rem; }
+		@media (max-width: 700px) { .facts, .cards { grid-template-columns: 1fr; } h1 { letter-spacing: -2px; } .hero-content { padding-top: 130px; } nav { top: 20px; } }
+	</style>
+</head>
+<body>
+	<header class="hero">
+		<nav><div class="brand">SCIENCE<span>SPARK</span> 2026</div><a class="button" href="registration.html">Register now</a></nav>
+		<div class="wrap hero-content">
+			<div class="tag">School Science Exhibition Competition</div>
+			<h1>Imagine.<br><span>Invent.</span> Inspire.</h1>
+			<p class="lead">A celebration of curious minds, bold ideas, and discoveries that can shape tomorrow. Bring your best science project and let your imagination take center stage.</p>
+			<a class="button" href="registration.html">Register for the exhibition →</a>
+			<div class="facts">
+				<div class="fact"><strong>18 April 2026</strong><small>Exhibition day</small></div>
+				<div class="fact"><strong>9:00 AM – 4:00 PM</strong><small>Event timings</small></div>
+				<div class="fact"><strong>Grades 6–12</strong><small>Open to students</small></div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="section"><div class="wrap">
+			<h2>Turn questions into discoveries.</h2>
+			<p class="section-intro">Students can participate individually or in teams of up to three. Present an original working model, experiment, or research project to our panel of judges.</p>
+			<div class="cards">
+				<article class="card"><div class="icon">🔬</div><h3>Explore any field</h3><p>Choose from physics, chemistry, biology, environment, technology, or an idea of your own.</p></article>
+				<article class="card"><div class="icon">🏆</div><h3>Win exciting prizes</h3><p>Compete for trophies, certificates, and special awards for creativity and social impact.</p></article>
+				<article class="card"><div class="icon">💡</div><h3>Share your spark</h3><p>Explain your work, connect with fellow young scientists, and inspire your community.</p></article>
+			</div>
+		</div></section>
+		<section class="register" id="register"><div class="wrap">
+			<h2>Ready to make an impact?</h2>
+			<p>Registrations close on 31 March 2026. Participation is free for all eligible students.</p>
+			<a class="button" href="registration.html">Register for Science Spark 2026</a>
+		</div></section>
+	</main>
+	<footer>© 2026 Science Spark · Hosted by your school science department</footer>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
