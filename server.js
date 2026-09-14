@@ -44,6 +44,11 @@ const server = http.createServer((req, res) => {
       "Content-Type": "text/html"
     });
     res.end(page);
+  } else if (req.method === "GET" && url.pathname === "/admin-open.js") {
+    res.writeHead(200, {
+      "Content-Type": "text/javascript"
+    });
+    res.end(fs.readFileSync("public/admin-open.js"));
   }
 });
 

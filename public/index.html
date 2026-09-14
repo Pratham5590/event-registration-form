@@ -57,6 +57,8 @@
 		.lead { max-width: 600px; color: #536875; margin-bottom: 25px; }
 		.button { display: inline-block; padding: 10px 18px; border-radius: 4px; background: var(--blue); color: white; text-decoration: none; font-weight: bold; }
 		.button:hover { background: var(--navy); }
+		.nav-actions { display: flex; align-items: center; gap: 10px; }
+		.admin-button { background: var(--navy); }
 		.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 650px; margin-top: 42px; }
 		.fact { border-left: 2px solid var(--blue); padding-left: 12px; }
 		.fact strong { display: block; font-size: 1rem; }
@@ -76,7 +78,7 @@
 </head>
 <body>
 	<header class="hero">
-		<nav><div class="brand">SCIENCE<span>SPARK</span> 2026</div><a class="button" href="registration.html">Register now</a></nav>
+		<nav><div class="brand">SCIENCE<span>SPARK</span> 2026</div><div class="nav-actions"><button class="button admin-button" type="button" onclick="openAdmin()">Admin</button><a class="button" href="registration.html">Register now</a></div></nav>
 		<div class="wrap hero-content">
 			<div class="tag">School Science Exhibition Competition</div>
 			<h1>Imagine.<br><span>Invent.</span> Inspire.</h1>
@@ -106,6 +108,6 @@
 		</div></section>
 	</main>
 	<footer>© 2026 Science Spark · Hosted by DPS science department</footer>
-  <script type="module" src="script.js"></script>
+	<script src="admin-open.js" type="module"></script>
 </body>
 </html>
