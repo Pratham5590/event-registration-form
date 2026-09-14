@@ -1,6 +1,6 @@
 const form = document.querySelector("#register");
 
-form.addEventListener(async (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.querySelector("#name").value;
   const regClass = document.querySelector("#class").value;
@@ -11,22 +11,24 @@ form.addEventListener(async (event) => {
     headers: {
       "Content-Type": "application/json"
     },
-    body: {
+    body: JSON.stringify({
       name,
       regClass,
       school,
       email
-    }
+    })
   });
   const data = await response.json();
-  if (response.ok) {
+  if (data.message === "Registration successful") {
     form.style.display = "none";
     const confirm = document.createElement("p");
     confirm.classList.add("confirm");
-    confirm.textContent = "Your registration is under review. Please check your email regularly for updates."
+    confirm.textContent = "Your registration is under review. Please check your email regularly for updates.";
+    document.querySelector('main').append(confirm);
   } else {
     const confirm = document.createElement("p");
     confirm.classList.add("confirm-wrong");
-    confirm.textContent = "We were unable to process your registration. Please try again."
+    confirm.textContent = "We were unable to process your registration. Please try again.";
+    document.querySelector('main').append(confirm);
   }
-})
+});
